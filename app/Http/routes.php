@@ -11,15 +11,16 @@
 */
 // get, post, put, delete
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-// Route::get('/books', 'BookController@getIndex');
-// Route::get('/books/show/{title}', 'BookController@getShow');
-// Route::get('/books/create', 'BookController@getCreate');
-// Route::post('/books/create', 'BookController@postCreate');
-#Route::get('/books/foo', 'BookController@bar');
+
 Route::controller('/lorem','LoremController');
 Route::controller('/users','UserController');
+
 Route::get('/practice', function() {
-    echo config('app.debug');
+  Debugbar::error('Error!');
+  Debugbar::warning('Watch out…');
+  Debugbar::addMessage('Another message', 'mylabel');
+
+  return 'Practice';
 });

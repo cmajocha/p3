@@ -1,40 +1,22 @@
 <?php
 
 namespace p3\Http\Controllers;
-
 use p3\Http\Controllers\Controller;
-
+use Badcow\LoremIpsum\Generator as Generate;
 class LoremController extends Controller {
 
     public function __construct() {
-        # Put anything here that should happen before any of the other actions
     }
 
-    /**
-    * Responds to requests to GET /books
-    */
-    public function getIndex() {
-        return 'Get Some Lorem';
-    }
-
-    /**
-     * Responds to requests to GET /books/show/{id}
-     */
-    public function getShow($id) {
-        return 'Show book: '.$id;
-    }
-
-    /**
-     * Responds to requests to GET /books/create
-     */
     public function getCreate() {
-        return 'Form to create a new book';
-    }
-
+           return view('lorem.create');
+       }
     /**
-     * Responds to requests to POST /books/create
-     */
+    * Responds to requests to GET /lorem
+    */
     public function postCreate() {
-        return 'Process adding new book';
+      $generator = new Generate();
+      $paragraphs = $generator->getParagraphs(3);
+      return view('lorem.get')->with('paragraphs', $paragraphs);
     }
 }
