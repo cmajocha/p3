@@ -2,17 +2,26 @@
 
 namespace p3\Http\Controllers;
 use p3\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Faker\Factory as Faker;
 class UserController extends Controller {
     public function __construct() {
         # Put anything here that should happen before any of the other actions
     }
-    /**
-    * Responds to requests to GET /users
-    */
-    public function getIndex() {
+
+    public function getCreate() {
+           return view('users.create');
+       }
+
+    public function postCreate(Request $request) {
+
+      $num = \Input::get("totalusers");
+      $myusers = Array();
       $faker = Faker::create();
-      return view('users.get')->with('faker->name . " " . faker->address ', $faker->name . " " . $faker->address );
-        //
+      for ($i=0; $i < $num; $i++) {
+      $myusers[$i] = Array("name" => $faker->name, "address" => $faker->address, "email" => $faker->email);
     }
+return view('users.create')->with('myusers', $myusers);
+}
+
 }

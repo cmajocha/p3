@@ -11,18 +11,18 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific styesheets.
 --}}
 @section('head')
+
 @stop
 
 @section('content')
-<section>
 <div class="container">
   <div class="row">
 <div class="body-content">
-      <form method="POST" action="/lorem/create" accept-charset="UTF-8">
+      <form method="POST" action="/users/create" accept-charset="UTF-8">
       <input type='hidden' name='_token' value='{{ csrf_token() }}'>
 <p>
-  <label for="total">How many total paragraphs do you want?:</label>
-  <select name="total" id="total">
+  <label for="totalusers">How many users do you need?:</label>
+  <select name="totalusers" id="totalusers">
     <option value="1" selected="selected">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -45,23 +45,22 @@ such as a page specific styesheets.
     <option value="20">20</option>
   </select>
 <p>
-    <input class="btn btn-primary" type="submit" value="Get Some Text!">
+    <input class="btn btn-primary" type="submit" value="Get Some Users!">
 </form>
-<br />
 <hr />
-<b>Lorem Text...</b>
-<br /><br />
-
-@if(isset($paragraphs))
-                @foreach($paragraphs as $paragraph)
-                    <p> {!! $paragraph !!} </p>
-                @endforeach
-    @endif
-
-  </div>
-  </div>
-  </div>
-</section>
+<b>Random Folks...</b><br /><br />
+<?php
+    if (isset($myusers))
+        foreach($myusers as $myuser) {
+            echo $myuser['name'] . "<br>";
+            echo $myuser['address'] . "<br>";
+            echo $myuser['email'] . " <br>";
+            echo "<br>";
+        }
+?>
+</div>
+</div>
+</div>
 @stop
 
 {{--
