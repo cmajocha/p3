@@ -9,7 +9,7 @@ class LoremController extends Controller {
     public function __construct() {
     }
     /**
-         * Responds to requests to GET /users/create
+         * Responds to requests to GET /lorem/create
          */
     public function getCreate() {
            return view('lorem.create');
