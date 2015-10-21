@@ -36,7 +36,7 @@
   <header>
       <div class="container">
           <div class="row">
-              <h1 class="site-title"><strong>P3: Courtney Deveau Majocha</strong></h1>
+              <h1 class="site-title"><strong>P3: Developer's Best Friend</strong></h1>
 </div>
 
 <!--Site Navigation -->
@@ -47,6 +47,8 @@
         <li><a href="/">Home</a></li>
         <li><a href="/lorem/create">Lorem Generator</a></li>
         <li><a href="/users/create">User Generator</a></li>
+        <li><a href="http://p1.courtney-dwa15-practice.me/">P1</a></li>
+        <li><a href="http://p2.courtney-dwa15-practice.me/">P2</a></li>
       </ul>
     </div>
   </div>
