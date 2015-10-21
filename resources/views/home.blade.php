@@ -19,7 +19,7 @@ such as a page specific styesheets.
 <div class="body-content">
     <p>This is my random data generator project for P3. You have two types of data that you can get from this project</p>
 <ol>
-  <li><a href="/lorem/create"><strong>Get Some Lorem Ipsum Text:</strong></a></li> Need to plug in some content? I can help. Pick how many paragraphs you want, and get all the lorem ipsum text you can handle </p>
+  <li><a href="/lorem/create"><strong>Get Some Lorem Ipsum Text:</strong></a></li> Need to plug in some content? I can help. Pick how many paragraphs you want, and get all the lorem ipsum text you can handle.</p>
   <li><a href="/users/create"><strong>Get Some Users:</strong></a></li> Randomly generate some fake folks to help you flesh out your program.
 </ol>
 </div>

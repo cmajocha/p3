@@ -38,9 +38,22 @@
           <div class="row">
               <h1 class="site-title"><strong>P3: Courtney Deveau Majocha</strong></h1>
 </div>
-    </header>
 
-    <section>
+<!--Site Navigation -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/lorem/create">Lorem Generator</a></li>
+        <li><a href="/users/create">User Generator</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navigation Ends Here -->
+
+    </header>
         {{-- Main page content will be yielded here --}}
         @yield('content')
     </section>
@@ -48,7 +61,7 @@
     <div class="container">
      <div class="row">
     <footer>
-        &copy; {{ date('Y') }}
+        &nbsp; &copy; {{ date('Y') }}
     </footer>
      </div>
      </div>

@@ -42,3 +42,11 @@ button, input, select, textarea {
 	padding:2em;
 	font-size:2em;
 }
+
+nav.navbar.navbar-inverse {
+	width:970px;
+	margin:auto;
+	margin-left:-15px;
+	border-radius:0px;
+	border-top:4px solid blue;
+}

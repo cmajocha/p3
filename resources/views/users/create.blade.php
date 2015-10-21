@@ -44,19 +44,32 @@ such as a page specific styesheets.
     <option value="19">19</option>
     <option value="20">20</option>
   </select>
+  <br />
+  <strong>Include Address?</strong> <input type="checkbox" value="value1" name="address">
+  <br />
+  <strong>Incude  Email?</strong> <input type="checkbox" value="value2" name="email"><br />
+
 <p>
-    <input class="btn btn-primary" type="submit" value="Get Some Users!">
+    <input class="btn btn-primary" type="submit" value="Get Some Users!"></p
 </form>
 <hr />
 <b>Random Folks...</b><br /><br />
 <?php
     if (isset($myusers))
+    // iterate through the array variable I created and return the number of users selected
         foreach($myusers as $myuser) {
             echo $myuser['name'] . "<br>";
-            echo $myuser['address'] . "<br>";
-            echo $myuser['email'] . " <br>";
+            // include address if that box is checked
+            if (isset($_POST['address'])) {
+              echo $myuser['address'] . "<br>";
+            }
+            // include email if that box is checked
+            if (isset($_POST['email'])) {
+              echo $myuser['email'] . "<br>";
+            }
             echo "<br>";
         }
+
 ?>
 </div>
 </div>
