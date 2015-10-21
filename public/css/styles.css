@@ -43,8 +43,12 @@ button, input, select, textarea {
 	font-size:2em;
 }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    /* display: block; */
+    width: inherit;
+}
+
 nav.navbar.navbar-inverse {
-	width:970px;
 	margin:auto;
 	margin-left:-15px;
 	border-radius:0px;
