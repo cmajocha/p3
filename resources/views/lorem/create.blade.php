@@ -12,7 +12,6 @@ such as a page specific styesheets.-->
 @stop
 
 @section('content')
-<div id="section">
 <div class="container">
   <div class="row">
 <div class="body-content">
@@ -55,8 +54,6 @@ such as a page specific styesheets.-->
                     <p> {!! $paragraph !!} </p>
                 @endforeach
     @endif
-
-  </div>
   </div>
   </div>
 </div>
