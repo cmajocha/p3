@@ -10,8 +10,6 @@
 
     <link href="/css/styles.css" type='text/css' rel='stylesheet'>
 
-    <link href="/css/styles.css" type='text/css' rel='stylesheet'>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -28,16 +26,17 @@
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
+<!--Yield any page specific CSS files or anything else you might want in the heading -->
     @yield('head')
 
 </head>
+
 <body>
   <header>
       <div class="container">
           <div class="row">
               <h1 class="site-title"><strong>P3: Developer's Best Friend</strong></h1>
-</div>
+          </div>
 
 <!--Site Navigation -->
 <nav class="navbar navbar-inverse">
@@ -54,11 +53,12 @@
   </div>
 </nav>
 <!-- Navigation Ends Here -->
-
-    </header>
-        {{-- Main page content will be yielded here --}}
+</div>
+</header>
+    <div id="section">
+<!-- Main page content will be yielded here -->
         @yield('content')
-    </section>
+    </div>
 
     <div class="container">
      <div class="row">
@@ -68,9 +68,8 @@
      </div>
      </div>
 
+<!--Yield any page specific JS files or anything else you might want at the end of the page -->
 
-    {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
     @yield('body')
-
 </body>
 </html>

@@ -5,11 +5,11 @@
 @stop
 
 
-{{--
+<!--
 This `head` section will be yielded right before the closing </head> tag.
 Use it to add specific things that *this* View needs in the head,
 such as a page specific styesheets.
---}}
+-->
 @section('head')
 
 @stop
@@ -17,10 +17,9 @@ such as a page specific styesheets.
 @section('content')
 <div class="container">
   <div class="row">
-<div class="body-content">
+      <div class="body-content">
       <form method="POST" action="/users/create" accept-charset="UTF-8">
       <input type='hidden' name='_token' value='{{ csrf_token() }}'>
-<p>
   <label for="totalusers">How many users do you need?:</label>
   <select name="totalusers" id="totalusers">
     <option value="1" selected="selected">1</option>
@@ -47,10 +46,8 @@ such as a page specific styesheets.
   <br />
   <strong>Include Address?</strong> <input type="checkbox" value="value1" name="address">
   <br />
-  <strong>Incude  Email?</strong> <input type="checkbox" value="value2" name="email"><br />
-
-<p>
-    <input class="btn btn-primary" type="submit" value="Get Some Users!"></p
+  <strong>Incude  Email?</strong> <input type="checkbox" value="value2" name="email"><br /><br />
+    <input class="btn btn-primary" type="submit" value="Get Some Users!">
 </form>
 <hr />
 <b>Random Folks...</b><br /><br />
@@ -76,10 +73,9 @@ such as a page specific styesheets.
 </div>
 @stop
 
-{{--
+<!--
 This `body` section will be yielded right before the closing </body> tag.
 Use it to add specific things that *this* View needs at the end of the body,
-such as a page specific JavaScript files.
---}}
+such as a page specific JavaScript files.-->
 @section('body')
 @stop
